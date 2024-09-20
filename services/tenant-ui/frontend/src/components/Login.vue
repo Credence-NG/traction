@@ -3,13 +3,8 @@
     <div class="col-12 md:col-6 xl:col-4">
       <div class="px-8">
         <div class="pt-4 pb-6">
-          <img
-            src="/img/logo/cred.png"
-            class="logo-traction"
-          />
+          <img src="/img/logo/cred.png" class="logo-traction"/>
           <img src="/img/logo/credence-logo.png" class="logo-bc" />
-
-
         </div>
 
         <!-- Logging In -->
@@ -169,6 +164,6 @@ const doGoBack = () => {
 // See layout.scss for generalized common login layout stuff
 // Set the image specific to this component here though
 .cover-image {
-  background-image: url('/img/random-uni.jpg');
+  background-image: url('/img/verified-main.png');
 }
 </style>
