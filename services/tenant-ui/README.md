@@ -113,7 +113,9 @@ npm run i18n:fill-keys
 
 Replacing `fill-keys` with which ever script your would like to run
 
-## OIDC Login for Innkeeper
+## 
+
+ Login for Innkeeper
 
 The Tenant UI Inkeeper functionality can be configured to log in with either (or both)
 - the Innkeeper secret
