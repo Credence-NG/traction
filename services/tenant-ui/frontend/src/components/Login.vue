@@ -4,7 +4,7 @@
       <div class="px-8">
         <div class="pt-4 pb-6">
           <img src="/img/logo/cred.png" class="logo-traction"/>
-          <img src="/img/logo/credence-logo.png" class="logo-bc" />
+          <!-- <img src="/img/logo/credence-logo.png" class="logo-bc" /> -->
         </div>
 
         <!-- Logging In -->
