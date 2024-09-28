@@ -1,4 +1,10 @@
 version: "3.9"
+networks:
+  keycloak-network:
+    external: true
+  traefik-network:
+    external: true
+    
 services:
   ngrok-traction-agent:
     image: ngrok/ngrok
@@ -143,7 +149,17 @@ services:
     ###############################################
     extra_hosts:
       - host.docker.internal:host-gateway
-
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traction.rule=Host(`credswitch.com`)"
+      - "traefik.http.services.traction.loadbalancer.server.port=8080"
+      - "traefik.docker.network=traefik-network"
+      - "traefik.http.routers.traction.entrypoints=websecure"
+      - "traefik.http.routers.traction.tls=true"
+      - "traefik.http.routers.traction.tls.certresolver=letsencrypt"
+    networks:
+      - keycloak-network
+      - traefik-network
   tenant-proxy:
     pull_policy: missing
     build:
